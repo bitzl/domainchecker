@@ -10,7 +10,7 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 
 @Component
-public class IndexTransformer implements GenericTransformer<Domain, Domain> {
+public class IndexTransformer implements DomainTransformer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(IndexTransformer.class);
 

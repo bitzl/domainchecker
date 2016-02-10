@@ -1,18 +1,15 @@
 package com.bitzl.domains.domainchecker.core.integration.transformer;
 
 import com.bitzl.domains.domainchecker.core.model.Domain;
-import org.springframework.integration.transformer.Transformer;
-import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AddTldTransformer implements Transformer {
+public class AddTldTransformer implements DomainTransformer {
 
     @Override
-    public Message<?> transform(Message<?> message) {
-        Domain domain = (Domain) message.getPayload();
+    public Domain transform(Domain domain) {
         domain.setTld(extractTld(domain.getName()));
-        return message;
+        return domain;
     }
 
     private String extractTld(String domain) {

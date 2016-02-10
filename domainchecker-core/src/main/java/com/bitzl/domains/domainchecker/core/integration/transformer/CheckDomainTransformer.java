@@ -8,7 +8,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @Component
-public class CheckDomainTransformer implements GenericTransformer<Domain, Domain> {
+public class CheckDomainTransformer implements DomainTransformer {
 
     @Override
     public Domain transform(Domain domain) {
