@@ -34,10 +34,10 @@ public class IntegrationConfig {
         return new DirectChannel();
     }
 
-    @Bean(name = PollerMetadata.DEFAULT_POLLER)
-    public PollerMetadata poller() {
-        return Pollers.fixedRate(100).get();
-    }
+    //@Bean(name = PollerMetadata.DEFAULT_POLLER)
+    //public PollerMetadata poller() {
+    //    return Pollers.fixedRate(100).get();
+    //}
 
     @Bean
     public IntegrationFlow checkDomainFlow() {

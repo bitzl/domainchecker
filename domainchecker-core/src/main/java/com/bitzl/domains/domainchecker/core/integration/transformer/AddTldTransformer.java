@@ -12,7 +12,7 @@ public class AddTldTransformer implements DomainTransformer {
         return domain;
     }
 
-    private String extractTld(String domain) {
-        return domain.substring(domain.lastIndexOf(".") + 1);
+    private String extractTld(String name) {
+        return name.substring(name.lastIndexOf(".") + 1);
     }
 }

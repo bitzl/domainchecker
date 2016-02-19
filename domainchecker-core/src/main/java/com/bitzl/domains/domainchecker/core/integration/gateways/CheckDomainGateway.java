@@ -14,6 +14,6 @@ public interface CheckDomainGateway {
     @Gateway(requestChannel = "checkDomain")
     Domain addOrUpdate(Domain domain);
 
-    @Gateway(requestChannel = "retrieve")
-    Domain get(String hostname);
+    // @Gateway(requestChannel = "retrieve")
+    // Domain get(String hostname);
 }

@@ -16,8 +16,7 @@ public class IndexTransformer implements DomainTransformer {
 
     @Override
     public Domain transform(Domain domain) {
-        domain.setExists(true);
-        LOGGER.info("Indexed " + domain.getName() + ".");
+        LOGGER.info("Pretending to index " + domain.getName() + ".");
         return domain;
     }
 
